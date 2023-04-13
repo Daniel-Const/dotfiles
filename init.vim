@@ -74,6 +74,13 @@ nnoremap <silent> [fzf-p]q     :<C-u>FzfPreviewQuickFixRpc<CR>
 nnoremap <silent> [fzf-p]l     :<C-u>FzfPreviewLocationListRpc<CR>
 
 
+" Terminal Mappings
+nmap t [terminal]
+xmap t [terminal]
+noremap <silent> [terminal]t   :<C-u>ToggleTerm size=40 direction=horizontal<CR>
+noremap <silent> [terminal]v   :<C-u>ToggleTerm size=80 direction=vertical<CR>
+noremap <silent> [terminal]f   :<C-u>ToggleTerm size=50 direction=float<CR>
+
 lua << EOF
 require'nvim-tree'.setup {
   sort_by = "case_sensitive",
