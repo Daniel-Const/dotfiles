@@ -1,31 +1,21 @@
 set mouse=a
 
-" Plugins will be downloaded under the specified directory.
 call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 
-" Declare the list of plugins.
 Plug 'tpope/vim-sensible'
 Plug 'junegunn/seoul256.vim'
 Plug 'rebelot/kanagawa.nvim'
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'nvim-tree/nvim-tree.lua'
 Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
-
-lua << EOF
-require("toggleterm").setup {
-	open_mapping = [[<c-\>]]
-}
-EOF
-
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'yuki-yano/fzf-preview.vim', { 'branch': 'release/rpc' }
-
+Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins' }
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+Plug 'tpope/vim-fugitive'
 
-" List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
 colorscheme kanagawa
@@ -46,11 +36,25 @@ let g:fzf_action = {
                     \ 'ctrl-t': 'tabedit ',
                     \ }
 
+lua << EOF
+require("toggleterm").setup {
+	open_mapping = [[<c-\>]]
+}
+EOF
+
+
 " Custom Mappings
 noremap <C-b> :Buffers <CR>
 noremap <Space> :NvimTreeToggle <CR>
 noremap <silent> md :<C-u>MarkdownPreview<CR>
 noremap <C-n> :noh<CR>
+
+" Move lines up/down
+noremap <A-up> :call feedkeys( line('.')==1 ? '' : 'ddkP' )<CR>
+noremap <A-down> ddp
+
+" Git diff split
+noremap <C-g> :Gdiffsplit <CR> 
 
 " FZF Mappings
 noremap <C-f> :FZF <CR>
@@ -80,6 +84,7 @@ xmap t [terminal]
 noremap <silent> [terminal]t   :<C-u>ToggleTerm size=40 direction=horizontal<CR>
 noremap <silent> [terminal]v   :<C-u>ToggleTerm size=80 direction=vertical<CR>
 noremap <silent> [terminal]f   :<C-u>ToggleTerm size=50 direction=float<CR>
+
 
 lua << EOF
 require'nvim-tree'.setup {
