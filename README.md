@@ -18,7 +18,6 @@ Run these commands in nvim editor
 :TSUpdate
 :PackerInstall
 :PackerSync
-:lua ColorMyPencils()
 ```
 
 ## Tmux
@@ -28,3 +27,9 @@ Run these commands in nvim editor
 ```bash
 sudo apt install tmux
 ```
+
+## Handy tools
+
+  - ripgrep
+  - bat
+  - lsd
