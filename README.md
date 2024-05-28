@@ -20,6 +20,10 @@ Run these commands in nvim editor
 :PackerSync
 ```
 
+## Kitty
+
+Install [Kitty](https://sw.kovidgoyal.net/kitty/)
+
 ## Tmux
 
 ### Install tmux
@@ -33,3 +37,4 @@ sudo apt install tmux
   - ripgrep
   - bat
   - lsd
+  - fzf
