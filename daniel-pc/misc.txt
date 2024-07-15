@@ -1,0 +1,7 @@
+# /usr/share/wayland-sessions/hyperland-wrapped.desktop
+# Add wrappedh1 script to .local/bin/
+[Desktop Entry]
+Name=Hyprland-Wrapped
+Comment=An intelligent dynamic tiling Wayland compositor
+Exec=/home/daniel/.local/bin/wrappedh1
+Type=Application
