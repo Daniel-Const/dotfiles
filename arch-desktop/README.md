@@ -46,7 +46,7 @@ Install all the packages from the paclist.txt file
 
 ### DRM Kernel mode setting
 
-- Follow (this)[https://wiki.hyprland.org/Nvidia/] from hyprland wiki (Easier to follow than arch wiki)
+- Follow [this](https://wiki.hyprland.org/Nvidia/) from hyprland wiki (Easier to follow than arch wiki)
 
 ## Hyprland setup
 
