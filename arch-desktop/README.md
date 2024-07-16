@@ -78,3 +78,8 @@ Type=Application
 ## Font
 
 Install CascadiaCode from [NerdFonts](https://www.nerdfonts.com/)
+
+## MISC
+
+- Install Spotify using flatpak...
+- Have fun :)  
