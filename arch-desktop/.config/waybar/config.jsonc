@@ -43,8 +43,6 @@
         "return-type": "json",
         "on-click": "pkill wofi || sleep 0.15 && wofi --show drun",
         "on-click-right": "pkill wofi || sleep 0.15 && wofi --show drun" ,
-        // "on-click": "pkill wofi || wofi --show drun -n",
-        // "on-click-right": "pkill wofi || wofi --show run -n",
     },
     "hyprland/workspaces": {
         // "format": "{icon} {name}",

@@ -19,18 +19,22 @@ nodejs
 hyprland
 hyprlock
 hyprpaper
+hypridle
 xdg-desktop-portal-hyprland
 
 waybar
 wofi
+waypaper
+swaybg
 
 inxi
 playerctl
 pipewire
 wireplumber
+pamixer
+pavucontrol
 
 swaync
-
 mako
 
 qt5-wayland
