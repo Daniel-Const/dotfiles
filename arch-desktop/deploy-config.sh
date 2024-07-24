@@ -3,6 +3,4 @@
 cp .zshrc ~/
 cp .tmux.conf ~/
 cp -r .scripts ~/
-cp -r .config/kitty ~/.config/
-cp -r .config/hypr ~/.config/
-cp -r .config/nvim ~/.config/
+cp -r .config/* ~/.config/

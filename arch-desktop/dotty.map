@@ -1,0 +1,4 @@
+.config : ~/dottytest/.config
+.tmux.conf : ~/dottytest/.tmux.conf
+.zshrc : ~/dottytest/.zshrc
+

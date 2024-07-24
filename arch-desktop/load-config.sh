@@ -8,3 +8,4 @@ cp -r ~/.config/hypr ./.config/
 cp -r ~/.config/nvim ./.config/
 cp -r ~/.config/waybar ./.config/
 cp -r ~/.config/waypaper ./.config/
+cp -r ~/.config/mako ./.config/

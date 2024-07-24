@@ -57,4 +57,7 @@ use {
     "neovim/nvim-lspconfig",
 }
 
+-- CPP lang support
+use {'neoclide/coc.nvim', branch = 'release'}
+
 end)
