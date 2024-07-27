@@ -169,6 +169,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/daniel/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
+  },
+  ["vim-glsl"] = {
+    loaded = true,
+    path = "/home/daniel/.local/share/nvim/site/pack/packer/start/vim-glsl",
+    url = "https://github.com/tikhomirov/vim-glsl"
   }
 }
 

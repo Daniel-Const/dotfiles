@@ -60,4 +60,7 @@ use {
 -- CPP lang support
 use {'neoclide/coc.nvim', branch = 'release'}
 
+-- glsl support
+use {'tikhomirov/vim-glsl'}
+
 end)
