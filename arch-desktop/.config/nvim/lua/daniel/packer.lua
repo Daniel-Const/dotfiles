@@ -63,4 +63,10 @@ use {'neoclide/coc.nvim', branch = 'release'}
 -- glsl support
 use {'tikhomirov/vim-glsl'}
 
+-- Markdown preview
+use({
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+})
+
 end)

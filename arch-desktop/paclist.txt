@@ -11,6 +11,7 @@ kitty
 openssh
 fzf
 tmux
+ripgrep
 
 go
 npm
@@ -26,6 +27,7 @@ waybar
 wofi
 waypaper
 swaybg
+wl-clipboard
 
 inxi
 playerctl
@@ -43,3 +45,4 @@ qt6-wayland
 qt5ct
 qt6ct
 man-pages
+python-pip

@@ -8,7 +8,7 @@
 ### Partitions
 
 /boot: 1 GiB
-/swap: 8 GiB
+/swap: 8 GiB (More?)
 /mnt:  the-rest GiB
 
 ## Desktop Environments
@@ -32,6 +32,8 @@ Also KDE Plasma is a good backup in case something went wrong setting up Hyprlan
  > ./deploy-config.sh  
 
 ```
+### Dotty
+- TODO: Use my dotty app :) 
 
 ## Packages
 
@@ -41,12 +43,24 @@ Install all the packages from the paclist.txt file
 ## Nvidia
 
 ```bash
-> pacman -S nvidia nvidia-utils lib32-nvidia-utils
+> pacman -S nvidia nvidia-utils lib32-nvidia-utils egl-wayland
 ```
 
 ### DRM Kernel mode setting
 
 - Follow [this](https://wiki.hyprland.org/Nvidia/) from hyprland wiki (Easier to follow than arch wiki)
+
+```bash
+# /etc/mkinitcpio.conf
+MODULES=(... nvidia nvidia_modeset nvidia_uvm nvidia_drm ...)
+
+# /etc/modprobe.d/nvidia.conf
+options nvidia_drm modeset=1 fbdev=1
+
+> sudo mkinitcpio -P
+
+> systemctl reboot
+```
 
 ## Hyprland setup
 
@@ -79,7 +93,20 @@ Type=Application
 
 Install CascadiaCode from [NerdFonts](https://www.nerdfonts.com/)
 
-## MISC
+## Utilities
 
-- Install Spotify using flatpak...
+- Clipboard: wl-clipboard
+- Screenshot: hyprshot
+- Finder: wofi
+- Wallpaper: waypaper
+- Topbar: waybar
+- Idle: hypridle
+- Lock: hyprlock
+
+## Apps 
+
+- Spotify (flatpack?)
+- Steam (https://wiki.archlinux.org/title/Steam)
+
+# Note
 - Have fun :)  

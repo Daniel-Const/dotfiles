@@ -111,6 +111,8 @@ source $ZSH/oh-my-zsh.sh
 
 alias nv=nvim
 alias nvd=neovide
+alias sleepoff=~/scripts/sleep-off.sh
+alias sleepon=~/scripts/sleep-on.sh
 ### key-bindings.zsh ###
 #     ____      ____
 #    / __/___  / __/
@@ -632,3 +634,4 @@ fi
   'unset' '__fzf_completion_options'
 }
 ### end: completion.zsh ###
+
