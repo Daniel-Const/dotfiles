@@ -1,0 +1,20 @@
+#!/usr/bin/python
+
+"""
+Set wallpaper and reload
+"""
+
+import sys
+import os
+import pathlib
+import shutil
+
+args = sys.argv
+wallpaper = args[1]
+
+dir_path = os.getcwd()
+path_to_wallpaper = pathlib.Path(dir_path).joinpath(wallpaper)
+destination = pathlib.Path.home().joinpath(".config/waypaper/wallpapers/")
+shutil.copyfile(path_to_wallpaper, destination.joinpath(wallpaper))
+
+print("Added wallpaper: ", wallpaper)

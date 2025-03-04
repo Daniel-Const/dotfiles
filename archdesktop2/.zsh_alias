@@ -1,0 +1,4 @@
+alias nv=nvim
+alias reload_waybar=~/.scripts/reload_waybar
+alias diskuse="du -h -d 1 ."
+alias wallpaper=~/.scripts/wallpaper

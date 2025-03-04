@@ -1,0 +1,9 @@
+hypr: ~/.config/hypr
+kitty: ~/.config/kitty
+nvim: ~/.config/nvim
+wofi: ~/.config/wofi
+waypaper: ~/.config/waypaper
+waybar: ~/.config/waybar
+.zsh_alias: ~/.zsh_alias
+.zshrc: ~/.zshrc
+.scripts: ~/.scripts
