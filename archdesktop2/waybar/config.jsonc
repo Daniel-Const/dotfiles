@@ -14,10 +14,9 @@
         "temperature",
         "clock",
     ],
-    "modules-center": [
-        "hyprland/workspaces",
-    ],
+    "modules-center": [],
     "modules-right": [
+        "hyprland/workspaces",
         "custom/spotify",
         "pulseaudio",
         "tray",
