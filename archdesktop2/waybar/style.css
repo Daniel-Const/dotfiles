@@ -1,133 +1,78 @@
+@import "colors.css";
 * {
-    /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 13px;
-    border-radius: 20px;
+  border: none;
+  border-radius: 0;
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 14px;
+  font-weight: 500;
+  min-height: 0;
 }
 
-window#waybar {
-    background-color: rgba(0, 0, 0, 0);
-    color: #ffffff;
-    transition-property: background-color;
-    transition-duration: .5s;
+/* Fix icon alignment - add extra left padding to center icons */
+#custom-launcher {
+  font-size: 18px;
+  padding: 5px 12px;
 }
 
-window#waybar.hidden {
-    opacity: 0.2;
-}
-
-button {
-    /* Use box-shadow instead of border so the text isn't offset */
-    /* Avoid rounded borders under each button name */
-}
-
-.modules-right {
-    background: linear-gradient(to left, rgba(56, 47, 47, 0.5) 0%, rgba(255, 58, 222, 0.5) 90%);
-    margin: 2px 10px 0 0;
-    color: #ffffff;
-}
-
-.modules-center {
- /*   background: rgba(255, 58, 222, 0.8); */
- /* color: #ffffff; */
-}
-
-.modules-left {
-    margin: 2px 0 0 5px;
-    background: linear-gradient(to right, rgba(56, 47, 47, 0.5) 0%, rgba(252, 34, 216, 0.5) 90%);
-    color: #ffffff;
-}
-
-
-
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-button:hover {
-    background: inherit;
-    box-shadow: inset 0 -3px #ffffff;
-}
-
-/* you can set a style on hover for any module like this */
-#pulseaudio:hover {
-    background: rgba(0, 43, 80, 0.85);
-}
-
-#workspaces button {
-    padding: 0 5px;
-    background-color: transparent;
-    color: #ffffff;
-}
-
-#workspaces button:hover {
-    background: rgba(0, 0, 0, 0.2);
-}
-
-#workspaces button.focused {
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
-}
-
-#workspaces button.urgent {
-    background-color: #eb4d4b;
-}
-
-#mode {
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
-}
-
-
-/* If workspaces is the leftmost module, omit left margin */
-.modules-left>widget:first-child>#workspaces {
-    margin-left: 0;
-}
-
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right>widget:last-child>#workspaces {
-    margin-right: 0;
-}
-
-@keyframes blink {
-    to {
-        background-color: #ffffff;
-        color: #000000;
-    }
-}
-
-
-#clock,
-#battery,
-#cpu,
-#memory,
-#temperature,
-#network,
-#pulseaudio,
-#custom-media,
-#tray,
-#mode,
-#custom-power,
-#custom-menu,
-#custom-spotify,
-#idle_inhibitor {
-    padding: 0 10px;
-}
-
-#mode {
-    color: #cc3436;
-    font-weight: bold;
+#custom-clipboard,
+#custom-screenshot {
+  padding: 5px 12px;
 }
 
 #custom-power {
-    border-radius: 100px;
-    font-size: 20px;
+  font-size: 16px;
+  padding: 5px 12px;
 }
 
-/*-----Indicators----*/
-#idle_inhibitor.activated {
-    color: #2dcc36;
+#custom-spotify {
+    padding: 0 10px;
 }
 
-#pulseaudio.muted {
-    color: #cc3436;
+
+window#waybar {
+  background: rgba(40, 40, 40, 0);
+  color: @on_surface;
+}
+
+/* Left modules */
+#custom-launcher {
+  background: @primary;
+  color: @on_primary;
+  padding: 5px 15px;
+  margin: 5px 0 5px 5px;
+  border-radius: 16px;
+  font-size: 18px;
+  /* min-height: 8px; */
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 9px;
+  padding-right: 13px;
+}
+
+#custom-code {
+  background: @surface_container_high;
+  color: @tertiary;
+  padding: 5px 12px;
+  margin: 5px 2px;
+  border-radius: 16px;
+  font-size: 16px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 6px;
+  padding-right: 12px;
+}
+
+#cpu,
+#memory,
+#network,
+#custom-gpu,
+#temperature,
+#disk {
+  background: @surface_container_high;
+  color: @on_surface;
+  padding: 5px 12px;
+  margin: 5px 2px;
+  border-radius: 16px;
 }
 
 #temperature.critical {
@@ -135,45 +80,158 @@ button:hover {
 }
 
 
+#cpu {
+  color: @secondary;
+}
+
+#memory {
+  color: @tertiary;
+}
+
+#network {
+  color: @secondary;
+}
+
+#custom-gpu {
+  color: @tertiary;
+}
+
+#disk {
+  color: @secondary;
+}
+
+/* Center modules */
 #workspaces {
-    padding: 0px 5px;
+  background: transparent;
+  margin: 5px;
 }
 
 #workspaces button {
-    all: unset;
-    padding: 0px 5px;
-    color: rgb(250, 250, 250);
-    transition: all .2s ease;
+  background: @surface_container_high;
+  color: @outline;
+  padding: 5px 10px;
+  margin: 0 3px;
+  border-radius: 16px;
+  border: none;
+  box-shadow: none;
+  transition: all 0.3s ease;
 }
 
 #workspaces button:hover {
-    color: rgb(249, 232, 232);
-    border: none;
-    text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .5);
-    transition: all 1s ease;
+  background: @surface_container_highest;
+  color: @on_surface;
+  font-weight: 700;
+  border: none;
+  box-shadow: none;
 }
 
 #workspaces button.active {
-    color: rgb(244, 230, 255);
-    border: none;
-    text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+  background: @primary;
+  padding: 5px 10px;
+  color: @on_primary;
+  font-weight: 700;
 }
 
-#workspaces button.empty {
-    color: rgba(0, 5, 9, 0.698);
-    border: none;
-    text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .2);
+#workspaces button.active:hover {
+  background: @primary;
+  color: @on_primary;
+  font-weight: 700;
 }
 
-#workspaces button.empty:hover {
-    color: rgba(0, 0, 0, 0);
-    border: none;
-    text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .5);
-    transition: all 1s ease;
+/* Right modules */
+#custom-ime,
+#clock,
+#custom-weather,
+#custom-clipboard,
+#custom-screenshot,
+#network.wifi,
+#pulseaudio,
+#cpu,
+#custom-power {
+  background: @surface_container_high;
+  color: @on_surface;
+  padding: 5px 12px;
+  margin: 5px 2px;
+  border-radius: 16px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 9px;
+  padding-right: 12px;
 }
 
-/* #workspaces button.empty.active {
-    color: #2dcc36;
-    border: none;
-    text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
-} */
+#custom-ime {
+  color: @secondary;
+  font-weight: 600;
+}
+
+#clock {
+  color: @tertiary;
+  font-weight: 600;
+}
+
+#custom-weather {
+  color: @secondary;
+}
+
+#pulseaudio {
+  color: @tertiary;
+}
+
+#network.wifi {
+  color: @secondary;
+}
+
+#pulseaudio.muted {
+  color: @tertiary;
+}
+
+#custom-quick-actions {
+  color: @primary_fixed_dim;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  padding-left: 9px;
+  padding-right: 13px;
+}
+
+#custom-power {
+  background: @error;
+  color: @on_error;
+  margin-right: 5px;
+  padding: 0 12px;
+  font-size: 16px;
+}
+
+/* Tooltips */
+tooltip {
+  background: @surface_container;
+  border: 2px solid @primary;
+  border-radius: 16px;
+  color: @on_surface;
+}
+
+tooltip label {
+  color: @on_surface;
+  padding: 5px;
+}
+
+#custom-quick-actions,
+#custom-wallpaper {
+  background: @primary;
+  color: @surface_container_high;
+  padding: 5px 12px;
+  margin: 5px 2px;
+  border-radius: 16px;
+  font-size: 16px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 9px;
+  padding-right: 12px;
+}
+
+#mpris {
+  background: @primary;
+  color: @surface_container_high;
+  padding: 5px 12px;
+  margin: 5px 2px;
+  border-radius: 16px;
+}
