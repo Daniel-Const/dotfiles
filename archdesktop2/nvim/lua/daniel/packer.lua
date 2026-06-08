@@ -13,13 +13,21 @@ use {
   requires = { {'nvim-lua/plenary.nvim'} }
 }
 
-  use({
-	  'catppuccin/nvim',
-	  as = 'catppuccin',
-	  config = function()
-	          vim.cmd('colorscheme catppuccin')
-	  end
-  })
+    -- use({
+	--  'catppuccin/nvim',
+    --	  as = 'catppuccin',
+	--  config = function()
+	--          vim.cmd('colorscheme catppuccin')
+	--  end
+    --})
+
+use ({
+    'sainnhe/gruvbox-material',
+    as = 'gruvbox-material',
+    config = function()
+                vim.cmd('colorscheme gruvbox-material')
+    end
+})
 
 use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 use('nvim-treesitter/playground')
@@ -48,12 +56,14 @@ use {
   }
 }
 
+use {'neovim/nvim-lspconfig'}
+
 use { 'vim-airline/vim-airline' }
 use { 'vim-airline/vim-airline-themes' }
 
 use {
-    "williamboman/mason.nvim",
-    "williamboman/mason-lspconfig.nvim",
+--    "williamboman/mason.nvim",
+  --  "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
 }
 
