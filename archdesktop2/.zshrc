@@ -104,3 +104,17 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 source /home/daniel/.zsh_alias
+
+# fnm
+FNM_PATH="/home/daniel/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="/home/daniel/.local/share/fnm:$PATH"
+  eval "`fnm env`"
+fi
+
+eval "$(fnm env --use-on-cd --shell zsh)"
+
+alias ps4="~/opensource/shadps4-qtlauncher/build/shadPS4QtLauncher"
+
+export PATH="$PATH:$HOME/.cargo/bin"
+export PATH="$HOME/.local/bin:$PATH"
