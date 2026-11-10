@@ -8,12 +8,20 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
 -- Colors! 
-use({
-  'catppuccin/nvim',
-  as = 'catppuccin',
-  config = function()
-          vim.cmd('colorscheme catppuccin')
-  end
+-- use({
+--   'catppuccin/nvim',
+--   as = 'catppuccin',
+--   config = function()
+--           vim.cmd('colorscheme catppuccin')
+--   end
+-- })
+
+use ({
+    'sainnhe/gruvbox-material',
+    as = 'gruvbox-material',
+    config = function()
+                vim.cmd('colorscheme gruvbox-material')
+    end
 })
 
 
@@ -48,11 +56,13 @@ use {
   }
 }
 
-use {
-    "williamboman/mason.nvim",
-    "williamboman/mason-lspconfig.nvim",
-    "neovim/nvim-lspconfig",
-}
+use {'neovim/nvim-lspconfig'}
+
+-- use {
+--     -- "williamboman/mason.nvim",
+--     -- "williamboman/mason-lspconfig.nvim",
+--     -- "neovim/nvim-lspconfig",
+-- }
 
 use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 use('nvim-treesitter/playground')
@@ -73,4 +83,13 @@ use({
     run = function() vim.fn["mkdp#util#install"]() end,
 })
 use "nvim-lua/plenary.nvim"
+
+use({
+    "m4xshen/hardtime.nvim",
+    requires = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
+    opts = {}
+})
+
+  
+
 end)
